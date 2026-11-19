@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import base.BaseTest;
 import pages.NavLinks;
@@ -66,7 +67,9 @@ public class TestCart extends BaseTest {
 
 	@Test
 	public void validateCartAfterLogin() {
+		SoftAssert sa = new SoftAssert();
 		nav.GoToProducts();
+		
 		String productString = "T-Shirt";
 		List<WebElement> products = productPage.validateSearch(productString);
 		for (WebElement p : products) {
@@ -74,15 +77,19 @@ public class TestCart extends BaseTest {
 					.parseInt(p.findElement(By.cssSelector("a.add-to-cart")).getAttribute("data-product-id"));
 			productPage.addProductToCartAndContinue(getId);
 		}
+		
 		nav.GoToCart();
 		int getCount = cart.cartProductCount();
+		
 		nav.GoToAccount();
 		PageAccount acc = new PageAccount(driver);
 		acc.loginUser(readProperty("email"), readProperty("password"));
-		if (acc.validateLogin()) {
-			nav.GoToCart();
-			Assert.assertEquals(cart.cartProductCount(), getCount);
-		}
+		sa.assertTrue(nav.isUserLoggedIn());
+		
+		nav.GoToCart();
+		sa.assertEquals(cart.cartProductCount(), getCount);
+		
+		sa.assertAll();
 	}
 
 	

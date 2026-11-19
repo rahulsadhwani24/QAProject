@@ -34,8 +34,11 @@ public class PageAccount extends ClassUtilities {
 	@FindBy(css = "button[data-qa='login-button']")
 	WebElement buttonLogin;
 
-	@FindBy(css = "form p")
-	WebElement message;
+	@FindBy(css = "form[action='/login'] p")
+	WebElement loginMessage;
+	
+	@FindBy(css = "form[action='/signup'] p")
+	WebElement signupMessage;
 	
 	@FindBy(css = "h2[data-qa='account-deleted'] b")
 	WebElement accountDeletedMessage;
@@ -55,13 +58,13 @@ public class PageAccount extends ClassUtilities {
 	}
 	
 	public boolean validateRegistrationMessage() {
-		WaitForElementToAppear(driver, message);
-		return message.getText().equalsIgnoreCase("Email Address already exist!");
+		WaitForElementToAppear(driver, signupMessage);
+		return signupMessage.getText().equalsIgnoreCase("Email Address already exist!");
 	}
 	
 	public boolean validateLogin() {
-		WaitForElementToAppear(driver, message);
-		return message.getText().equalsIgnoreCase("Your email or password is incorrect!");
+		WaitForElementToAppear(driver, loginMessage);
+		return loginMessage.getText().equalsIgnoreCase("Your email or password is incorrect!");
 	}
 	
 	public boolean validateDeleteAccout() {

@@ -64,6 +64,10 @@ public class NavLinks extends ClassUtilities {
 		testCases.click();
 	}
 	
+	public boolean isUserLoggedIn() {
+		return isElementVisible(driver, logout);
+	}
+	
 	public void logoutUser() {
 		WaitForElementToAppear(driver, logout);
 		if(isElementVisible(driver, logout)) {

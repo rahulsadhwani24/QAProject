@@ -54,7 +54,7 @@ public class TestProducts extends BaseTest{
 	
 	@Test void verifyCategoryProducts() {
 		nav.GoToProducts();
-		Assert.assertEquals(productPage.categoryWomenDresses(), "WOMEN -  Dress PRODUCTS");
+		Assert.assertEquals(productPage.categoryWomenDresses(), "WOMEN - DRESS PRODUCTS");
 	}
 	
 	

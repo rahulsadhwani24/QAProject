@@ -39,6 +39,7 @@ public class TestGeneral extends BaseTest {
 	public void validateContactForm() {
 		SoftAssert softAssert = new SoftAssert();
 		PageContact contact = new PageContact(driver);
+		nav.GoToContact();
 		contact.contactForm("Rahul", "rahu@gmail.com", "Validating Contact Page");
 		softAssert.assertTrue(contact.validateMessage());
 		nav.GoToHome();
@@ -84,7 +85,9 @@ public class TestGeneral extends BaseTest {
 	@Test
 	public void verifyScrollWithoutButton() {
 		SoftAssert sa = new SoftAssert();
+		
 		sa.assertTrue(home.isHomePageVisible());
+		
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 		try {
@@ -92,10 +95,10 @@ public class TestGeneral extends BaseTest {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		if(home.isSubscribeVisible()) {
-			jse.executeScript("window.scrollTo(0, 0)");
-			sa.assertTrue(home.isHomePageVisible());
-		}
+		sa.assertTrue(home.isSubscribeVisible());
+		
+		jse.executeScript("window.scrollTo(0, 0)");
+		sa.assertTrue(home.isHomePageVisible());
 		
 		sa.assertAll();
 	}

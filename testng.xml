@@ -3,7 +3,7 @@
 <suite name="Suite">
   <listeners>
   	<listener class-name="utils.Listeners" />
-  	<listener class-name="utils.AnnotationTrnasform" />
+  	<listener class-name="utils.AnnotationTransform" />
   </listeners>
   
   <test name="ui">

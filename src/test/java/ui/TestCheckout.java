@@ -46,7 +46,8 @@ public class TestCheckout extends BaseTest{
 		nav.GoToCart();
 		cart.proceedToCheckoutAndGoToAccountPage();
 		account.loginUser(readProperty("email"), readProperty("password"));
-		sa.assertFalse(account.validateLogin());
+		sa.assertTrue(nav.isUserLoggedIn());
+		
 		nav.GoToCart();
 		cart.proceedToCheckout();
 		checkOut.placeOrder();
@@ -61,7 +62,8 @@ public class TestCheckout extends BaseTest{
 	public void loginBeforeCheckout() {
 		nav.GoToAccount();
 		account.loginUser(readProperty("email"), readProperty("password"));
-		sa.assertFalse(account.validateLogin());
+		sa.assertTrue(nav.isUserLoggedIn());
+		
 		nav.GoToProducts();
 		productPage.addProductToCartAndContinue(2);
 		productPage.addProductToCartAndContinue(4);
@@ -81,6 +83,7 @@ public class TestCheckout extends BaseTest{
 			String company, String address,  String country, String state, String city, String zipcode, String number, String email) {
 
 		String name = firstName + lastName;
+		email = email.replace("@", System.currentTimeMillis() + "@");
 		
 		productPage.addProductToCartAndContinue(2);
 		productPage.addProductToCartAndContinue(4);
@@ -108,6 +111,7 @@ public class TestCheckout extends BaseTest{
 			String company, String address,  String country, String state, String city, String zipcode, String number, String email) {
 		
 		String name = firstName + lastName;
+		email = email.replace("@", System.currentTimeMillis() + "@");
 		
 		nav.GoToAccount();
 		account.registerUser(name, email);

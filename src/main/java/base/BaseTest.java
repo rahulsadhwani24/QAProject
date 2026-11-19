@@ -1,6 +1,9 @@
 package base;
 
-import org.openqa.selenium.Dimension;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -27,6 +30,7 @@ public class BaseTest extends ClassUtilities{
 			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("--incognito");
+			options.addArguments("--headless");
 			driver = new FirefoxDriver(options);
 		}
 		else {
@@ -35,24 +39,33 @@ public class BaseTest extends ClassUtilities{
 			options.addArguments("--incognito");
 			options.addArguments("--headless");
 			driver = new ChromeDriver(options);
+			
+			// To ByPass Ads
+			Map<String, Object> params = new HashMap<>();
+			params.put("urls", Arrays.asList(
+			    "*doubleclick.net*",
+			    "*googlesyndication.com*",
+			    "*googleadservices.com*",
+			    "*adservice.google.com*",
+			    "*pagead2.googlesyndication.com*"
+			));
+			((ChromeDriver) driver).executeCdpCommand("Network.enable", new HashMap<>());
+			((ChromeDriver) driver).executeCdpCommand("Network.setBlockedURLs", params);
 		}
 	}
 	
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void initializeTest() {
 		invokeBrowser();
-		if(browser.contains("headless")) {
-			driver.manage().window().setSize(new Dimension(1440, 900));
-		}else {
-			driver.manage().window().maximize();
-		}
-		driver.get("https://www.automationexercise.com/");
+		driver.manage().window().maximize();
+		driver.get(readProperty("url"));
 	}
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
 		if(driver != null) {
 			driver.quit();
+			driver = null;
 		}
 	}
 	

@@ -1,14 +1,20 @@
 package utils;
 
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 public class ClassUtilities {
 
@@ -38,5 +44,20 @@ public class ClassUtilities {
 		catch(Exception e) { 
 			return null;
 		}
+	}
+	
+	public void captureScreenshot(String screenshotName, WebDriver driver) {
+		if(driver == null) {
+			System.out.println("Cannot capture screenshot | Driver is null");
+			return;
+		}
+		TakesScreenshot ss = (TakesScreenshot) driver;
+		File source = ss.getScreenshotAs(OutputType.FILE);
+	    File destination = new File("./test-output/screenshots/" + screenshotName + ".png");
+	    try {
+	        FileUtils.copyFile(source, destination);
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
 	}
 }
