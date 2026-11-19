@@ -7,27 +7,10 @@
   </listeners>
   <test thread-count="5" name="ui(failed)">
     <classes>
-      <class name="ui.TestCart">
-        <methods>
-          <include name="tearDown"/>
-          <include name="validateCartAfterLogin"/>
-          <include name="initializeTest"/>
-          <include name="pageObjectsInitialization"/>
-        </methods>
-      </class> <!-- ui.TestCart -->
-      <class name="ui.TestCheckout">
-        <methods>
-          <include name="loginWhileCheckout"/>
-          <include name="tearDown"/>
-          <include name="initializeTest"/>
-          <include name="pageObjectsInitialization"/>
-          <include name="loginBeforeCheckout"/>
-        </methods>
-      </class> <!-- ui.TestCheckout -->
       <class name="ui.TestAccount">
         <methods>
           <include name="tearDown"/>
-          <include name="logoutUser"/>
+          <include name="registerUser" invocation-numbers="0"/>
           <include name="initializeTest"/>
           <include name="validateLoginWithCorrectDetails"/>
           <include name="accountPageInitialization"/>
