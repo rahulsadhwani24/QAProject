@@ -1,0 +1,15 @@
+pages\PageSignup.class
+utils\Listeners.class
+pages\PageCheckout.class
+utils\RetryAnalyzer.class
+utils\ClassUtilities.class
+pages\PageAccount.class
+base\BaseTest.class
+pages\PageCart.class
+pages\NavLinks.class
+utils\AnnotationTransform.class
+pages\PageContact.class
+pages\PageHome.class
+pages\PageProducts.class
+utils\DataProviders.class
+pages\PagePayment.class
