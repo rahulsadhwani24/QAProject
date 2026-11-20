@@ -26,7 +26,7 @@ public class TestGeneral extends BaseTest {
 
 	// ------------------------- Navigation ------------------------- //
 
-	@Test
+	@Test(groups = "testcase")
 	public void verifyTestCasesPage() {
 		nav.GoToTestCases();
 		String title = driver.findElement(By.cssSelector("h2.title b")).getText();
@@ -35,7 +35,7 @@ public class TestGeneral extends BaseTest {
 
 	// ------------------------- Contact ------------------------- //
 
-	@Test
+	@Test(groups = "contact")
 	public void validateContactForm() {
 		SoftAssert softAssert = new SoftAssert();
 		PageContact contact = new PageContact(driver);
@@ -48,7 +48,7 @@ public class TestGeneral extends BaseTest {
 
 	// ------------------------- Subscription ------------------------- //
 
-	@Test
+	@Test(groups = "subscription")
 	public void verifySubscriptionInHomePage() {
 		
 		home.subscribe("rahul@gmail.com");
@@ -56,7 +56,7 @@ public class TestGeneral extends BaseTest {
 	}
 	
 	
-	@Test
+	@Test(groups = "subscription")
 	public void verifySubscriptionInCartPage() {
 		nav.GoToCart();
 		PageCart cart = new PageCart(driver);
@@ -64,7 +64,7 @@ public class TestGeneral extends BaseTest {
 		Assert.assertTrue(cart.validateSubscription());
 	}
 	
-	@Test
+	@Test(groups = "scroll")
 	public void verifyScrollWithButton() {
 		SoftAssert sa = new SoftAssert();
 		sa.assertTrue(home.isHomePageVisible());
@@ -82,7 +82,7 @@ public class TestGeneral extends BaseTest {
 		sa.assertAll();
 	}
 	
-	@Test
+	@Test(groups = "scroll")
 	public void verifyScrollWithoutButton() {
 		SoftAssert sa = new SoftAssert();
 		

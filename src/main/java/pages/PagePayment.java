@@ -40,7 +40,7 @@ public class PagePayment extends ClassUtilities{
 	@FindBy(css = "h2[data-qa='order-placed']")
 	WebElement message;
 	
-	@FindBy(css = "a[href='download_invoice/0']")
+	@FindBy(css = "a.check_out")
 	WebElement buttonDownload;
 	
 	@FindBy(css = "a[data-qa='continue-button']")

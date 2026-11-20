@@ -1,194 +1,245 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="23" passed="21" failed="1" skipped="1">
+<testng-results ignored="0" total="26" passed="26" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-11-20T01:02:14 IST" name="Suite" finished-at="2026-11-20T01:05:29 IST" duration-ms="194818">
+  <suite started-at="2026-11-20T14:47:05 IST" name="Suite" finished-at="2026-11-20T14:51:28 IST" duration-ms="263051">
     <groups>
       <group name="Registration">
-        <method signature="TestAccount.registerUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ui.TestAccount@44afefd5]" name="registerUser" class="ui.TestAccount"/>
-        <method signature="TestAccount.registerUserWithExistingEmail()[pri:0, instance:ui.TestAccount@44afefd5]" name="registerUserWithExistingEmail" class="ui.TestAccount"/>
+        <method signature="TestAccount.registerUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ui.TestAccount@56de6d6b]" name="registerUser" class="ui.TestAccount"/>
+        <method signature="TestAccount.registerUserWithExistingEmail()[pri:0, instance:ui.TestAccount@56de6d6b]" name="registerUserWithExistingEmail" class="ui.TestAccount"/>
       </group> <!-- Registration -->
+      <group name="contact">
+        <method signature="TestGeneral.validateContactForm()[pri:0, instance:ui.TestGeneral@198ef2ce]" name="validateContactForm" class="ui.TestGeneral"/>
+      </group> <!-- contact -->
+      <group name="scroll">
+        <method signature="TestGeneral.verifyScrollWithButton()[pri:0, instance:ui.TestGeneral@198ef2ce]" name="verifyScrollWithButton" class="ui.TestGeneral"/>
+        <method signature="TestGeneral.verifyScrollWithoutButton()[pri:0, instance:ui.TestGeneral@198ef2ce]" name="verifyScrollWithoutButton" class="ui.TestGeneral"/>
+      </group> <!-- scroll -->
+      <group name="subscription">
+        <method signature="TestGeneral.verifySubscriptionInCartPage()[pri:0, instance:ui.TestGeneral@198ef2ce]" name="verifySubscriptionInCartPage" class="ui.TestGeneral"/>
+        <method signature="TestGeneral.verifySubscriptionInHomePage()[pri:0, instance:ui.TestGeneral@198ef2ce]" name="verifySubscriptionInHomePage" class="ui.TestGeneral"/>
+      </group> <!-- subscription -->
       <group name="Login">
-        <method signature="TestAccount.validateLoginWithCorrectDetails()[pri:0, instance:ui.TestAccount@44afefd5]" name="validateLoginWithCorrectDetails" class="ui.TestAccount"/>
-        <method signature="TestAccount.logoutUser()[pri:0, instance:ui.TestAccount@44afefd5]" name="logoutUser" class="ui.TestAccount"/>
-        <method signature="TestAccount.validateLoginWithIncorrectDetails()[pri:0, instance:ui.TestAccount@44afefd5]" name="validateLoginWithIncorrectDetails" class="ui.TestAccount"/>
+        <method signature="TestAccount.validateLoginWithCorrectDetails()[pri:0, instance:ui.TestAccount@56de6d6b]" name="validateLoginWithCorrectDetails" class="ui.TestAccount"/>
+        <method signature="TestAccount.validateLoginWithIncorrectDetails()[pri:0, instance:ui.TestAccount@56de6d6b]" name="validateLoginWithIncorrectDetails" class="ui.TestAccount"/>
+        <method signature="TestAccount.logoutUser()[pri:0, instance:ui.TestAccount@56de6d6b]" name="logoutUser" class="ui.TestAccount"/>
       </group> <!-- Login -->
+      <group name="checkout">
+        <method signature="TestCheckout.loginBeforeCheckout()[pri:0, instance:ui.TestCheckout@425d5d46]" name="loginBeforeCheckout" class="ui.TestCheckout"/>
+        <method signature="TestCheckout.loginWhileCheckout()[pri:0, instance:ui.TestCheckout@425d5d46]" name="loginWhileCheckout" class="ui.TestCheckout"/>
+        <method signature="TestCheckout.registerBeforeCheckoutAndDeleteAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ui.TestCheckout@425d5d46]" name="registerBeforeCheckoutAndDeleteAccount" class="ui.TestCheckout"/>
+        <method signature="TestCheckout.registerWhileCheckoutAndDeleteAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ui.TestCheckout@425d5d46]" name="registerWhileCheckoutAndDeleteAccount" class="ui.TestCheckout"/>
+        <method signature="TestCheckout.verifyAddressDetailsWhileCheckout()[pri:0, instance:ui.TestCheckout@425d5d46]" name="verifyAddressDetailsWhileCheckout" class="ui.TestCheckout"/>
+        <method signature="TestCheckout.verifyDownloadInvoice()[pri:0, instance:ui.TestCheckout@425d5d46]" name="verifyDownloadInvoice" class="ui.TestCheckout"/>
+      </group> <!-- checkout -->
+      <group name="testcase">
+        <method signature="TestGeneral.verifyTestCasesPage()[pri:0, instance:ui.TestGeneral@198ef2ce]" name="verifyTestCasesPage" class="ui.TestGeneral"/>
+      </group> <!-- testcase -->
+      <group name="cart">
+        <method signature="TestCart.addProductToCartFromRecommendedItems()[pri:0, instance:ui.TestCart@3005db4a]" name="addProductToCartFromRecommendedItems" class="ui.TestCart"/>
+        <method signature="TestCart.addProductToCartWithIncreaseQuantityAndValidate()[pri:0, instance:ui.TestCart@3005db4a]" name="addProductToCartWithIncreaseQuantityAndValidate" class="ui.TestCart"/>
+        <method signature="TestCart.addProductsToCart()[pri:0, instance:ui.TestCart@3005db4a]" name="addProductsToCart" class="ui.TestCart"/>
+        <method signature="TestCart.validateCartAfterLogin()[pri:0, instance:ui.TestCart@3005db4a]" name="validateCartAfterLogin" class="ui.TestCart"/>
+        <method signature="TestCart.validateDeleteProductsFromCart()[pri:0, instance:ui.TestCart@3005db4a]" name="validateDeleteProductsFromCart" class="ui.TestCart"/>
+      </group> <!-- cart -->
+      <group name="products">
+        <method signature="TestProducts.validateSearchProducts()[pri:0, instance:ui.TestProducts@4cbd03e7]" name="validateSearchProducts" class="ui.TestProducts"/>
+        <method signature="TestProducts.verifyBrandProducts()[pri:0, instance:ui.TestProducts@4cbd03e7]" name="verifyBrandProducts" class="ui.TestProducts"/>
+        <method signature="TestProducts.verifyCategoryProducts()[pri:0, instance:ui.TestProducts@4cbd03e7]" name="verifyCategoryProducts" class="ui.TestProducts"/>
+        <method signature="TestProducts.verifyProductDetails()[pri:0, instance:ui.TestProducts@4cbd03e7]" name="verifyProductDetails" class="ui.TestProducts"/>
+      </group> <!-- products -->
     </groups>
-    <test started-at="2026-11-20T01:02:14 IST" name="ui" finished-at="2026-11-20T01:05:29 IST" duration-ms="194818">
+    <test started-at="2026-11-20T14:47:05 IST" name="ui" finished-at="2026-11-20T14:51:28 IST" duration-ms="263051">
       <class name="ui.TestProducts">
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestProducts@5bfc257]" started-at="2026-11-20T01:05:09 IST" name="initializeTest" finished-at="2026-11-20T01:05:11 IST" duration-ms="2313" status="PASS">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestProducts@4cbd03e7]" started-at="2026-11-20T14:50:59 IST" name="initializeTest" finished-at="2026-11-20T14:51:03 IST" duration-ms="3244" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestProducts@5bfc257]" started-at="2026-11-20T01:05:11 IST" name="pageObjectsInitialization" finished-at="2026-11-20T01:05:11 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageObjectsInitialization -->
-        <test-method signature="validateSearchProducts()[pri:0, instance:ui.TestProducts@5bfc257]" started-at="2026-11-20T01:05:11 IST" name="validateSearchProducts" finished-at="2026-11-20T01:05:14 IST" duration-ms="3157" status="PASS">
+        <test-method signature="validateSearchProducts()[pri:0, instance:ui.TestProducts@4cbd03e7]" started-at="2026-11-20T14:51:03 IST" name="validateSearchProducts" finished-at="2026-11-20T14:51:07 IST" duration-ms="4717" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateSearchProducts -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestProducts@5bfc257]" started-at="2026-11-20T01:05:14 IST" name="tearDown" finished-at="2026-11-20T01:05:14 IST" duration-ms="130" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestProducts@5bfc257]" started-at="2026-11-20T01:05:14 IST" name="initializeTest" finished-at="2026-11-20T01:05:18 IST" duration-ms="3668" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeTest -->
-        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestProducts@5bfc257]" started-at="2026-11-20T01:05:18 IST" name="pageObjectsInitialization" finished-at="2026-11-20T01:05:18 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestProducts@4cbd03e7]" started-at="2026-11-20T14:51:03 IST" name="pageObjectsInitialization" finished-at="2026-11-20T14:51:03 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObjectsInitialization -->
-        <test-method signature="verifyCategoryProducts()[pri:0, instance:ui.TestProducts@5bfc257]" started-at="2026-11-20T01:05:18 IST" name="verifyCategoryProducts" finished-at="2026-11-20T01:05:21 IST" duration-ms="2964" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestProducts@4cbd03e7]" started-at="2026-11-20T14:51:07 IST" name="tearDown" finished-at="2026-11-20T14:51:08 IST" duration-ms="106" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestProducts@4cbd03e7]" started-at="2026-11-20T14:51:08 IST" name="initializeTest" finished-at="2026-11-20T14:51:10 IST" duration-ms="2358" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTest -->
+        <test-method signature="verifyBrandProducts()[pri:0, instance:ui.TestProducts@4cbd03e7]" started-at="2026-11-20T14:51:10 IST" name="verifyBrandProducts" finished-at="2026-11-20T14:51:14 IST" duration-ms="3866" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBrandProducts -->
+        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestProducts@4cbd03e7]" started-at="2026-11-20T14:51:10 IST" name="pageObjectsInitialization" finished-at="2026-11-20T14:51:10 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageObjectsInitialization -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestProducts@4cbd03e7]" started-at="2026-11-20T14:51:14 IST" name="tearDown" finished-at="2026-11-20T14:51:14 IST" duration-ms="130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestProducts@4cbd03e7]" started-at="2026-11-20T14:51:14 IST" name="initializeTest" finished-at="2026-11-20T14:51:17 IST" duration-ms="3392" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTest -->
+        <test-method signature="verifyCategoryProducts()[pri:0, instance:ui.TestProducts@4cbd03e7]" started-at="2026-11-20T14:51:17 IST" name="verifyCategoryProducts" finished-at="2026-11-20T14:51:20 IST" duration-ms="2897" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCategoryProducts -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestProducts@5bfc257]" started-at="2026-11-20T01:05:21 IST" name="tearDown" finished-at="2026-11-20T01:05:21 IST" duration-ms="116" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestProducts@5bfc257]" started-at="2026-11-20T01:05:21 IST" name="initializeTest" finished-at="2026-11-20T01:05:25 IST" duration-ms="4270" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeTest -->
-        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestProducts@5bfc257]" started-at="2026-11-20T01:05:25 IST" name="pageObjectsInitialization" finished-at="2026-11-20T01:05:25 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestProducts@4cbd03e7]" started-at="2026-11-20T14:51:17 IST" name="pageObjectsInitialization" finished-at="2026-11-20T14:51:17 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObjectsInitialization -->
-        <test-method signature="verifyProductDetails()[pri:0, instance:ui.TestProducts@5bfc257]" started-at="2026-11-20T01:05:25 IST" name="verifyProductDetails" finished-at="2026-11-20T01:05:29 IST" duration-ms="3661" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestProducts@4cbd03e7]" started-at="2026-11-20T14:51:20 IST" name="tearDown" finished-at="2026-11-20T14:51:20 IST" duration-ms="126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestProducts@4cbd03e7]" started-at="2026-11-20T14:51:20 IST" name="initializeTest" finished-at="2026-11-20T14:51:24 IST" duration-ms="4011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTest -->
+        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestProducts@4cbd03e7]" started-at="2026-11-20T14:51:24 IST" name="pageObjectsInitialization" finished-at="2026-11-20T14:51:24 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageObjectsInitialization -->
+        <test-method signature="verifyProductDetails()[pri:0, instance:ui.TestProducts@4cbd03e7]" started-at="2026-11-20T14:51:24 IST" name="verifyProductDetails" finished-at="2026-11-20T14:51:28 IST" duration-ms="3507" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyProductDetails -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestProducts@5bfc257]" started-at="2026-11-20T01:05:29 IST" name="tearDown" finished-at="2026-11-20T01:05:29 IST" duration-ms="129" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestProducts@4cbd03e7]" started-at="2026-11-20T14:51:28 IST" name="tearDown" finished-at="2026-11-20T14:51:28 IST" duration-ms="126" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- ui.TestProducts -->
       <class name="ui.TestCart">
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestCart@11841b15]" started-at="2026-11-20T01:02:48 IST" name="initializeTest" finished-at="2026-11-20T01:02:51 IST" duration-ms="3499" status="PASS">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestCart@3005db4a]" started-at="2026-11-20T14:47:43 IST" name="initializeTest" finished-at="2026-11-20T14:47:47 IST" duration-ms="3894" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestCart@11841b15]" started-at="2026-11-20T01:02:51 IST" name="pageObjectsInitialization" finished-at="2026-11-20T01:02:51 IST" duration-ms="25" status="PASS">
+        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestCart@3005db4a]" started-at="2026-11-20T14:47:47 IST" name="pageObjectsInitialization" finished-at="2026-11-20T14:47:47 IST" duration-ms="19" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObjectsInitialization -->
-        <test-method signature="addProductToCartFromRecommendedItems()[pri:0, instance:ui.TestCart@11841b15]" started-at="2026-11-20T01:02:51 IST" name="addProductToCartFromRecommendedItems" finished-at="2026-11-20T01:02:53 IST" duration-ms="1386" status="PASS">
+        <test-method signature="addProductToCartFromRecommendedItems()[pri:0, instance:ui.TestCart@3005db4a]" started-at="2026-11-20T14:47:47 IST" name="addProductToCartFromRecommendedItems" finished-at="2026-11-20T14:47:49 IST" duration-ms="2648" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addProductToCartFromRecommendedItems -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestCart@11841b15]" started-at="2026-11-20T01:02:53 IST" name="tearDown" finished-at="2026-11-20T01:02:53 IST" duration-ms="134" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestCart@3005db4a]" started-at="2026-11-20T14:47:49 IST" name="tearDown" finished-at="2026-11-20T14:47:50 IST" duration-ms="139" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestCart@11841b15]" started-at="2026-11-20T01:02:53 IST" name="initializeTest" finished-at="2026-11-20T01:02:56 IST" duration-ms="3476" status="PASS">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestCart@3005db4a]" started-at="2026-11-20T14:47:50 IST" name="initializeTest" finished-at="2026-11-20T14:47:55 IST" duration-ms="5105" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestCart@11841b15]" started-at="2026-11-20T01:02:56 IST" name="pageObjectsInitialization" finished-at="2026-11-20T01:02:56 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestCart@3005db4a]" started-at="2026-11-20T14:47:55 IST" name="pageObjectsInitialization" finished-at="2026-11-20T14:47:55 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObjectsInitialization -->
-        <test-method signature="addProductToCartWithIncreaseQuantityAndValidate()[pri:0, instance:ui.TestCart@11841b15]" started-at="2026-11-20T01:02:56 IST" name="addProductToCartWithIncreaseQuantityAndValidate" finished-at="2026-11-20T01:03:02 IST" duration-ms="5770" status="PASS">
+        <test-method signature="addProductToCartWithIncreaseQuantityAndValidate()[pri:0, instance:ui.TestCart@3005db4a]" started-at="2026-11-20T14:47:55 IST" name="addProductToCartWithIncreaseQuantityAndValidate" finished-at="2026-11-20T14:48:01 IST" duration-ms="5888" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addProductToCartWithIncreaseQuantityAndValidate -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestCart@11841b15]" started-at="2026-11-20T01:03:02 IST" name="tearDown" finished-at="2026-11-20T01:03:02 IST" duration-ms="125" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestCart@3005db4a]" started-at="2026-11-20T14:48:01 IST" name="tearDown" finished-at="2026-11-20T14:48:01 IST" duration-ms="127" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestCart@11841b15]" started-at="2026-11-20T01:03:02 IST" name="initializeTest" finished-at="2026-11-20T01:03:06 IST" duration-ms="3737" status="PASS">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestCart@3005db4a]" started-at="2026-11-20T14:48:01 IST" name="initializeTest" finished-at="2026-11-20T14:48:06 IST" duration-ms="4868" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestCart@11841b15]" started-at="2026-11-20T01:03:06 IST" name="pageObjectsInitialization" finished-at="2026-11-20T01:03:06 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestCart@3005db4a]" started-at="2026-11-20T14:48:06 IST" name="pageObjectsInitialization" finished-at="2026-11-20T14:48:06 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObjectsInitialization -->
-        <test-method signature="addProductsToCart()[pri:0, instance:ui.TestCart@11841b15]" started-at="2026-11-20T01:03:06 IST" name="addProductsToCart" finished-at="2026-11-20T01:03:10 IST" duration-ms="3881" status="PASS">
+        <test-method signature="addProductsToCart()[pri:0, instance:ui.TestCart@3005db4a]" started-at="2026-11-20T14:48:06 IST" name="addProductsToCart" finished-at="2026-11-20T14:48:09 IST" duration-ms="3892" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addProductsToCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestCart@11841b15]" started-at="2026-11-20T01:03:10 IST" name="tearDown" finished-at="2026-11-20T01:03:10 IST" duration-ms="200" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestCart@3005db4a]" started-at="2026-11-20T14:48:09 IST" name="tearDown" finished-at="2026-11-20T14:48:10 IST" duration-ms="126" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestCart@11841b15]" started-at="2026-11-20T01:03:10 IST" name="initializeTest" finished-at="2026-11-20T01:03:12 IST" duration-ms="1999" status="PASS">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestCart@3005db4a]" started-at="2026-11-20T14:48:10 IST" name="initializeTest" finished-at="2026-11-20T14:48:13 IST" duration-ms="3559" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestCart@11841b15]" started-at="2026-11-20T01:03:12 IST" name="pageObjectsInitialization" finished-at="2026-11-20T01:03:12 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestCart@3005db4a]" started-at="2026-11-20T14:48:13 IST" name="pageObjectsInitialization" finished-at="2026-11-20T14:48:13 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObjectsInitialization -->
-        <test-method signature="validateCartAfterLogin()[pri:0, instance:ui.TestCart@11841b15]" started-at="2026-11-20T01:03:12 IST" name="validateCartAfterLogin" finished-at="2026-11-20T01:03:22 IST" duration-ms="9900" status="PASS">
+        <test-method signature="validateCartAfterLogin()[pri:0, instance:ui.TestCart@3005db4a]" started-at="2026-11-20T14:48:13 IST" name="validateCartAfterLogin" finished-at="2026-11-20T14:48:26 IST" duration-ms="12529" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateCartAfterLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestCart@11841b15]" started-at="2026-11-20T01:03:22 IST" name="tearDown" finished-at="2026-11-20T01:03:22 IST" duration-ms="139" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestCart@3005db4a]" started-at="2026-11-20T14:48:26 IST" name="tearDown" finished-at="2026-11-20T14:48:26 IST" duration-ms="185" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestCart@11841b15]" started-at="2026-11-20T01:03:22 IST" name="initializeTest" finished-at="2026-11-20T01:03:26 IST" duration-ms="3709" status="PASS">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestCart@3005db4a]" started-at="2026-11-20T14:48:26 IST" name="initializeTest" finished-at="2026-11-20T14:48:31 IST" duration-ms="4960" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestCart@11841b15]" started-at="2026-11-20T01:03:26 IST" name="pageObjectsInitialization" finished-at="2026-11-20T01:03:26 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestCart@3005db4a]" started-at="2026-11-20T14:48:31 IST" name="pageObjectsInitialization" finished-at="2026-11-20T14:48:31 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObjectsInitialization -->
-        <test-method signature="validateDeleteProductsFromCart()[pri:0, instance:ui.TestCart@11841b15]" started-at="2026-11-20T01:03:26 IST" name="validateDeleteProductsFromCart" finished-at="2026-11-20T01:03:34 IST" duration-ms="7941" status="PASS">
+        <test-method signature="validateDeleteProductsFromCart()[pri:0, instance:ui.TestCart@3005db4a]" started-at="2026-11-20T14:48:31 IST" name="validateDeleteProductsFromCart" finished-at="2026-11-20T14:48:40 IST" duration-ms="8921" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateDeleteProductsFromCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestCart@11841b15]" started-at="2026-11-20T01:03:34 IST" name="tearDown" finished-at="2026-11-20T01:03:34 IST" duration-ms="185" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestCart@3005db4a]" started-at="2026-11-20T14:48:40 IST" name="tearDown" finished-at="2026-11-20T14:48:40 IST" duration-ms="117" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- ui.TestCart -->
       <class name="ui.TestCheckout">
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestCheckout@73877e19]" started-at="2026-11-20T01:03:34 IST" name="initializeTest" finished-at="2026-11-20T01:03:38 IST" duration-ms="3797" status="PASS">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:48:40 IST" name="initializeTest" finished-at="2026-11-20T14:48:45 IST" duration-ms="4953" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestCheckout@73877e19]" started-at="2026-11-20T01:03:38 IST" name="pageObjectsInitialization" finished-at="2026-11-20T01:03:38 IST" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:48:45 IST" name="pageObjectsInitialization" finished-at="2026-11-20T14:48:45 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObjectsInitialization -->
-        <test-method signature="loginBeforeCheckout()[pri:0, instance:ui.TestCheckout@73877e19]" started-at="2026-11-20T01:03:38 IST" name="loginBeforeCheckout" finished-at="2026-11-20T01:03:52 IST" duration-ms="14858" status="PASS">
+        <test-method signature="loginBeforeCheckout()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:48:45 IST" name="loginBeforeCheckout" finished-at="2026-11-20T14:49:04 IST" duration-ms="18830" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginBeforeCheckout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestCheckout@73877e19]" started-at="2026-11-20T01:03:52 IST" name="tearDown" finished-at="2026-11-20T01:03:53 IST" duration-ms="204" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:49:04 IST" name="tearDown" finished-at="2026-11-20T14:49:04 IST" duration-ms="157" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestCheckout@73877e19]" started-at="2026-11-20T01:03:53 IST" name="initializeTest" finished-at="2026-11-20T01:03:55 IST" duration-ms="2756" status="PASS">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:49:04 IST" name="initializeTest" finished-at="2026-11-20T14:49:08 IST" duration-ms="3886" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestCheckout@73877e19]" started-at="2026-11-20T01:03:55 IST" name="pageObjectsInitialization" finished-at="2026-11-20T01:03:55 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:49:08 IST" name="pageObjectsInitialization" finished-at="2026-11-20T14:49:08 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObjectsInitialization -->
-        <test-method signature="loginWhileCheckout()[pri:0, instance:ui.TestCheckout@73877e19]" started-at="2026-11-20T01:03:55 IST" name="loginWhileCheckout" finished-at="2026-11-20T01:04:04 IST" duration-ms="8722" status="PASS">
+        <test-method signature="loginWhileCheckout()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:49:08 IST" name="loginWhileCheckout" finished-at="2026-11-20T14:49:19 IST" duration-ms="11206" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWhileCheckout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestCheckout@73877e19]" started-at="2026-11-20T01:04:04 IST" name="tearDown" finished-at="2026-11-20T01:04:04 IST" duration-ms="139" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:49:19 IST" name="tearDown" finished-at="2026-11-20T14:49:19 IST" duration-ms="145" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestCheckout@73877e19]" started-at="2026-11-20T01:04:04 IST" name="initializeTest" finished-at="2026-11-20T01:04:08 IST" duration-ms="3868" status="PASS">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:49:19 IST" name="initializeTest" finished-at="2026-11-20T14:49:23 IST" duration-ms="3914" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestCheckout@73877e19]" started-at="2026-11-20T01:04:08 IST" name="pageObjectsInitialization" finished-at="2026-11-20T01:04:08 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:49:23 IST" name="pageObjectsInitialization" finished-at="2026-11-20T14:49:23 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObjectsInitialization -->
-        <test-method signature="registerBeforeCheckoutAndDeleteAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ui.TestCheckout@73877e19]" started-at="2026-11-20T01:04:08 IST" name="registerBeforeCheckoutAndDeleteAccount" data-provider="singleUserData" finished-at="2026-11-20T01:04:19 IST" duration-ms="11178" status="PASS">
+        <test-method signature="registerBeforeCheckoutAndDeleteAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:49:23 IST" name="registerBeforeCheckoutAndDeleteAccount" data-provider="singleUserData" finished-at="2026-11-20T14:49:35 IST" duration-ms="12212" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -259,19 +310,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerBeforeCheckoutAndDeleteAccount -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestCheckout@73877e19]" started-at="2026-11-20T01:04:19 IST" name="tearDown" finished-at="2026-11-20T01:04:20 IST" duration-ms="305" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:49:35 IST" name="tearDown" finished-at="2026-11-20T14:49:35 IST" duration-ms="118" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestCheckout@73877e19]" started-at="2026-11-20T01:04:20 IST" name="initializeTest" finished-at="2026-11-20T01:04:23 IST" duration-ms="3642" status="PASS">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:49:35 IST" name="initializeTest" finished-at="2026-11-20T14:49:42 IST" duration-ms="6298" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestCheckout@73877e19]" started-at="2026-11-20T01:04:23 IST" name="pageObjectsInitialization" finished-at="2026-11-20T01:04:23 IST" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:49:42 IST" name="pageObjectsInitialization" finished-at="2026-11-20T14:49:42 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObjectsInitialization -->
-        <test-method signature="registerWhileCheckoutAndDeleteAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ui.TestCheckout@73877e19]" started-at="2026-11-20T01:04:23 IST" name="registerWhileCheckoutAndDeleteAccount" data-provider="singleUserData" finished-at="2026-11-20T01:04:34 IST" duration-ms="11017" status="PASS">
+        <test-method signature="registerWhileCheckoutAndDeleteAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:49:42 IST" name="registerWhileCheckoutAndDeleteAccount" data-provider="singleUserData" finished-at="2026-11-20T14:49:53 IST" duration-ms="10956" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -342,21 +393,53 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerWhileCheckoutAndDeleteAccount -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestCheckout@73877e19]" started-at="2026-11-20T01:04:34 IST" name="tearDown" finished-at="2026-11-20T01:04:35 IST" duration-ms="209" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:49:53 IST" name="tearDown" finished-at="2026-11-20T14:49:53 IST" duration-ms="118" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:49:53 IST" name="initializeTest" finished-at="2026-11-20T14:49:56 IST" duration-ms="3392" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTest -->
+        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:49:56 IST" name="pageObjectsInitialization" finished-at="2026-11-20T14:49:56 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageObjectsInitialization -->
+        <test-method signature="verifyAddressDetailsWhileCheckout()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:49:56 IST" name="verifyAddressDetailsWhileCheckout" finished-at="2026-11-20T14:50:09 IST" duration-ms="13190" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddressDetailsWhileCheckout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:50:09 IST" name="tearDown" finished-at="2026-11-20T14:50:10 IST" duration-ms="126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:50:10 IST" name="initializeTest" finished-at="2026-11-20T14:50:14 IST" duration-ms="4592" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTest -->
+        <test-method signature="verifyDownloadInvoice()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:50:14 IST" name="verifyDownloadInvoice" finished-at="2026-11-20T14:50:27 IST" duration-ms="12597" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDownloadInvoice -->
+        <test-method is-config="true" signature="pageObjectsInitialization()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:50:14 IST" name="pageObjectsInitialization" finished-at="2026-11-20T14:50:14 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageObjectsInitialization -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestCheckout@425d5d46]" started-at="2026-11-20T14:50:27 IST" name="tearDown" finished-at="2026-11-20T14:50:27 IST" duration-ms="197" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- ui.TestCheckout -->
       <class name="ui.TestAccount">
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestAccount@44afefd5]" started-at="2026-11-20T01:02:16 IST" name="initializeTest" finished-at="2026-11-20T01:02:22 IST" duration-ms="6283" status="PASS">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestAccount@56de6d6b]" started-at="2026-11-20T14:47:06 IST" name="initializeTest" finished-at="2026-11-20T14:47:11 IST" duration-ms="4790" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method is-config="true" signature="accountPageInitialization()[pri:0, instance:ui.TestAccount@44afefd5]" started-at="2026-11-20T01:02:22 IST" name="accountPageInitialization" finished-at="2026-11-20T01:02:23 IST" duration-ms="442" status="PASS">
+        <test-method is-config="true" signature="accountPageInitialization()[pri:0, instance:ui.TestAccount@56de6d6b]" started-at="2026-11-20T14:47:11 IST" name="accountPageInitialization" finished-at="2026-11-20T14:47:11 IST" duration-ms="504" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- accountPageInitialization -->
-        <test-method signature="registerUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ui.TestAccount@44afefd5]" started-at="2026-11-20T01:02:23 IST" name="registerUser" data-provider="singleUserData" finished-at="2026-11-20T01:02:28 IST" duration-ms="5876" status="FAIL">
+        <test-method signature="registerUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ui.TestAccount@56de6d6b]" started-at="2026-11-20T14:47:11 IST" name="registerUser" data-provider="singleUserData" finished-at="2026-11-20T14:47:14 IST" duration-ms="3014" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -424,268 +507,172 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: input[data-qa='mobile_number']'
-(tried for 5 seconds with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: input[data-qa='mobile_number']'
-(tried for 5 seconds with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-at utils.ClassUtilities.WaitForElementToAppear(ClassUtilities.java:23)
-at pages.PageSignup.userDetails(PageSignup.java:121)
-at ui.TestAccount.registerUser(TestAccount.java:42)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-at org.testng.TestRunner.privateRun(TestRunner.java:744)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"input[data-qa='mobile_number']"}
-  (Session info: chrome=157.0.8103.79)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.52.0', revision: '5b37fd4 5b37fd4d98c08d6a43a0790417f91b8f6f32fb5c'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '26'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [00fa1adefef267cb192b185159b0e98a, findElement {value=input[data-qa='mobile_number'], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 157.0.8103.79, chrome: {chromedriverVersion: 157.0.8103.78 (4b3d0dabb825..., userDataDir: C:\Users\rahul\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53749}, goog:processID: 38104, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53749/devtoo..., se:cdpVersion: 157.0.8103.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10...., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 00fa1adefef267cb192b185159b0e98a
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:253)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:705)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:173)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:457)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:451)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy11.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:365)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:351)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:348)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210)
-... 33 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerUser -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestAccount@44afefd5]" started-at="2026-11-20T01:02:29 IST" name="tearDown" finished-at="2026-11-20T01:02:29 IST" duration-ms="221" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestAccount@56de6d6b]" started-at="2026-11-20T14:47:14 IST" name="tearDown" finished-at="2026-11-20T14:47:14 IST" duration-ms="125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestAccount@44afefd5]" started-at="2026-11-20T01:02:29 IST" name="initializeTest" finished-at="2026-11-20T01:02:33 IST" duration-ms="4157" status="PASS">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestAccount@56de6d6b]" started-at="2026-11-20T14:47:14 IST" name="initializeTest" finished-at="2026-11-20T14:47:18 IST" duration-ms="3904" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method is-config="true" signature="accountPageInitialization()[pri:0, instance:ui.TestAccount@44afefd5]" started-at="2026-11-20T01:02:33 IST" name="accountPageInitialization" finished-at="2026-11-20T01:02:33 IST" duration-ms="358" status="PASS">
+        <test-method is-config="true" signature="accountPageInitialization()[pri:0, instance:ui.TestAccount@56de6d6b]" started-at="2026-11-20T14:47:18 IST" name="accountPageInitialization" finished-at="2026-11-20T14:47:19 IST" duration-ms="506" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- accountPageInitialization -->
-        <test-method signature="registerUserWithExistingEmail()[pri:0, instance:ui.TestAccount@44afefd5]" started-at="2026-11-20T01:02:33 IST" name="registerUserWithExistingEmail" finished-at="2026-11-20T01:02:34 IST" duration-ms="535" status="PASS">
+        <test-method signature="registerUserWithExistingEmail()[pri:0, instance:ui.TestAccount@56de6d6b]" started-at="2026-11-20T14:47:19 IST" name="registerUserWithExistingEmail" finished-at="2026-11-20T14:47:20 IST" duration-ms="685" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerUserWithExistingEmail -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestAccount@44afefd5]" started-at="2026-11-20T01:02:34 IST" name="tearDown" finished-at="2026-11-20T01:02:34 IST" duration-ms="116" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestAccount@56de6d6b]" started-at="2026-11-20T14:47:20 IST" name="tearDown" finished-at="2026-11-20T14:47:20 IST" duration-ms="115" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method signature="validateLoginWithCorrectDetails()[pri:0, instance:ui.TestAccount@44afefd5]" started-at="2026-11-20T01:02:34 IST" name="validateLoginWithCorrectDetails" finished-at="2026-11-20T01:02:34 IST" depends-on-methods="ui.TestAccount.registerUser" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method ui.TestAccount.validateLoginWithCorrectDetails() on instance ui.TestAccount@44afefd5 depends on not successfully finished methods 
-[ui.TestAccount.registerUser() on instance ui.TestAccount@44afefd5]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method ui.TestAccount.validateLoginWithCorrectDetails() on instance ui.TestAccount@44afefd5 depends on not successfully finished methods 
-[ui.TestAccount.registerUser() on instance ui.TestAccount@44afefd5]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-at org.testng.TestRunner.privateRun(TestRunner.java:744)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestAccount@56de6d6b]" started-at="2026-11-20T14:47:20 IST" name="initializeTest" finished-at="2026-11-20T14:47:23 IST" duration-ms="3686" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTest -->
+        <test-method is-config="true" signature="accountPageInitialization()[pri:0, instance:ui.TestAccount@56de6d6b]" started-at="2026-11-20T14:47:23 IST" name="accountPageInitialization" finished-at="2026-11-20T14:47:24 IST" duration-ms="401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accountPageInitialization -->
+        <test-method signature="validateLoginWithCorrectDetails()[pri:0, instance:ui.TestAccount@56de6d6b]" started-at="2026-11-20T14:47:24 IST" name="validateLoginWithCorrectDetails" finished-at="2026-11-20T14:47:27 IST" depends-on-methods="ui.TestAccount.registerUser" duration-ms="3618" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateLoginWithCorrectDetails -->
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestAccount@44afefd5]" started-at="2026-11-20T01:02:34 IST" name="initializeTest" finished-at="2026-11-20T01:02:38 IST" duration-ms="3704" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeTest -->
-        <test-method is-config="true" signature="accountPageInitialization()[pri:0, instance:ui.TestAccount@44afefd5]" started-at="2026-11-20T01:02:38 IST" name="accountPageInitialization" finished-at="2026-11-20T01:02:38 IST" duration-ms="514" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- accountPageInitialization -->
-        <test-method signature="logoutUser()[pri:0, instance:ui.TestAccount@44afefd5]" started-at="2026-11-20T01:02:38 IST" name="logoutUser" finished-at="2026-11-20T01:02:43 IST" duration-ms="4505" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logoutUser -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestAccount@44afefd5]" started-at="2026-11-20T01:02:43 IST" name="tearDown" finished-at="2026-11-20T01:02:43 IST" duration-ms="126" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestAccount@56de6d6b]" started-at="2026-11-20T14:47:27 IST" name="tearDown" finished-at="2026-11-20T14:47:28 IST" duration-ms="136" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestAccount@44afefd5]" started-at="2026-11-20T01:02:43 IST" name="initializeTest" finished-at="2026-11-20T01:02:46 IST" duration-ms="3570" status="PASS">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestAccount@56de6d6b]" started-at="2026-11-20T14:47:28 IST" name="initializeTest" finished-at="2026-11-20T14:47:32 IST" duration-ms="4083" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method is-config="true" signature="accountPageInitialization()[pri:0, instance:ui.TestAccount@44afefd5]" started-at="2026-11-20T01:02:46 IST" name="accountPageInitialization" finished-at="2026-11-20T01:02:47 IST" duration-ms="351" status="PASS">
+        <test-method is-config="true" signature="accountPageInitialization()[pri:0, instance:ui.TestAccount@56de6d6b]" started-at="2026-11-20T14:47:32 IST" name="accountPageInitialization" finished-at="2026-11-20T14:47:32 IST" duration-ms="648" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- accountPageInitialization -->
-        <test-method signature="validateLoginWithIncorrectDetails()[pri:0, instance:ui.TestAccount@44afefd5]" started-at="2026-11-20T01:02:47 IST" name="validateLoginWithIncorrectDetails" finished-at="2026-11-20T01:02:47 IST" duration-ms="681" status="PASS">
+        <test-method signature="validateLoginWithIncorrectDetails()[pri:0, instance:ui.TestAccount@56de6d6b]" started-at="2026-11-20T14:47:32 IST" name="validateLoginWithIncorrectDetails" finished-at="2026-11-20T14:47:33 IST" duration-ms="672" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateLoginWithIncorrectDetails -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestAccount@44afefd5]" started-at="2026-11-20T01:02:48 IST" name="tearDown" finished-at="2026-11-20T01:02:48 IST" duration-ms="122" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestAccount@56de6d6b]" started-at="2026-11-20T14:47:33 IST" name="tearDown" finished-at="2026-11-20T14:47:33 IST" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestAccount@56de6d6b]" started-at="2026-11-20T14:47:33 IST" name="initializeTest" finished-at="2026-11-20T14:47:37 IST" duration-ms="4176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTest -->
+        <test-method is-config="true" signature="accountPageInitialization()[pri:0, instance:ui.TestAccount@56de6d6b]" started-at="2026-11-20T14:47:37 IST" name="accountPageInitialization" finished-at="2026-11-20T14:47:38 IST" duration-ms="442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accountPageInitialization -->
+        <test-method signature="logoutUser()[pri:0, instance:ui.TestAccount@56de6d6b]" started-at="2026-11-20T14:47:38 IST" name="logoutUser" finished-at="2026-11-20T14:47:43 IST" duration-ms="4983" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutUser -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestAccount@56de6d6b]" started-at="2026-11-20T14:47:43 IST" name="tearDown" finished-at="2026-11-20T14:47:43 IST" duration-ms="132" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- ui.TestAccount -->
       <class name="ui.TestGeneral">
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:04:35 IST" name="initializeTest" finished-at="2026-11-20T01:04:39 IST" duration-ms="4352" status="PASS">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:27 IST" name="initializeTest" finished-at="2026-11-20T14:50:31 IST" duration-ms="3891" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method is-config="true" signature="pageObjectInitialization()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:04:39 IST" name="pageObjectInitialization" finished-at="2026-11-20T01:04:39 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="pageObjectInitialization()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:31 IST" name="pageObjectInitialization" finished-at="2026-11-20T14:50:31 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObjectInitialization -->
-        <test-method signature="validateContactForm()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:04:39 IST" name="validateContactForm" finished-at="2026-11-20T01:04:44 IST" duration-ms="5417" status="PASS">
+        <test-method signature="validateContactForm()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:31 IST" name="validateContactForm" finished-at="2026-11-20T14:50:34 IST" duration-ms="2784" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateContactForm -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:04:44 IST" name="tearDown" finished-at="2026-11-20T01:04:45 IST" duration-ms="154" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:34 IST" name="tearDown" finished-at="2026-11-20T14:50:34 IST" duration-ms="126" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:04:45 IST" name="initializeTest" finished-at="2026-11-20T01:04:48 IST" duration-ms="3754" status="PASS">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:34 IST" name="initializeTest" finished-at="2026-11-20T14:50:37 IST" duration-ms="3504" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method is-config="true" signature="pageObjectInitialization()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:04:48 IST" name="pageObjectInitialization" finished-at="2026-11-20T01:04:48 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="pageObjectInitialization()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:37 IST" name="pageObjectInitialization" finished-at="2026-11-20T14:50:37 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObjectInitialization -->
-        <test-method signature="verifyScrollWithButton()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:04:48 IST" name="verifyScrollWithButton" finished-at="2026-11-20T01:04:52 IST" duration-ms="3148" status="PASS">
+        <test-method signature="verifyScrollWithButton()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:37 IST" name="verifyScrollWithButton" finished-at="2026-11-20T14:50:40 IST" duration-ms="3141" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyScrollWithButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:04:52 IST" name="tearDown" finished-at="2026-11-20T01:04:52 IST" duration-ms="119" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:40 IST" name="tearDown" finished-at="2026-11-20T14:50:41 IST" duration-ms="108" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:04:52 IST" name="initializeTest" finished-at="2026-11-20T01:04:55 IST" duration-ms="3368" status="PASS">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:41 IST" name="initializeTest" finished-at="2026-11-20T14:50:45 IST" duration-ms="4364" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method is-config="true" signature="pageObjectInitialization()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:04:55 IST" name="pageObjectInitialization" finished-at="2026-11-20T01:04:55 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageObjectInitialization -->
-        <test-method signature="verifyScrollWithoutButton()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:04:55 IST" name="verifyScrollWithoutButton" finished-at="2026-11-20T01:04:58 IST" duration-ms="3104" status="PASS">
+        <test-method signature="verifyScrollWithoutButton()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:45 IST" name="verifyScrollWithoutButton" finished-at="2026-11-20T14:50:48 IST" duration-ms="3114" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyScrollWithoutButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:04:58 IST" name="tearDown" finished-at="2026-11-20T01:04:58 IST" duration-ms="127" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:04:58 IST" name="initializeTest" finished-at="2026-11-20T01:05:02 IST" duration-ms="3336" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeTest -->
-        <test-method is-config="true" signature="pageObjectInitialization()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:05:02 IST" name="pageObjectInitialization" finished-at="2026-11-20T01:05:02 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="pageObjectInitialization()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:45 IST" name="pageObjectInitialization" finished-at="2026-11-20T14:50:45 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObjectInitialization -->
-        <test-method signature="verifySubscriptionInCartPage()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:05:02 IST" name="verifySubscriptionInCartPage" finished-at="2026-11-20T01:05:02 IST" duration-ms="553" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:48 IST" name="tearDown" finished-at="2026-11-20T14:50:48 IST" duration-ms="139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:48 IST" name="initializeTest" finished-at="2026-11-20T14:50:52 IST" duration-ms="3649" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTest -->
+        <test-method signature="verifySubscriptionInCartPage()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:52 IST" name="verifySubscriptionInCartPage" finished-at="2026-11-20T14:50:52 IST" duration-ms="513" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySubscriptionInCartPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:05:02 IST" name="tearDown" finished-at="2026-11-20T01:05:02 IST" duration-ms="115" status="PASS">
+        <test-method is-config="true" signature="pageObjectInitialization()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:52 IST" name="pageObjectInitialization" finished-at="2026-11-20T14:50:52 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageObjectInitialization -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:52 IST" name="tearDown" finished-at="2026-11-20T14:50:53 IST" duration-ms="122" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:05:02 IST" name="initializeTest" finished-at="2026-11-20T01:05:06 IST" duration-ms="3354" status="PASS">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:53 IST" name="initializeTest" finished-at="2026-11-20T14:50:55 IST" duration-ms="2539" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method signature="verifySubscriptionInHomePage()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:05:06 IST" name="verifySubscriptionInHomePage" finished-at="2026-11-20T01:05:06 IST" duration-ms="116" status="PASS">
+        <test-method signature="verifySubscriptionInHomePage()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:55 IST" name="verifySubscriptionInHomePage" finished-at="2026-11-20T14:50:55 IST" duration-ms="136" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySubscriptionInHomePage -->
-        <test-method is-config="true" signature="pageObjectInitialization()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:05:06 IST" name="pageObjectInitialization" finished-at="2026-11-20T01:05:06 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="pageObjectInitialization()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:55 IST" name="pageObjectInitialization" finished-at="2026-11-20T14:50:55 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObjectInitialization -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:05:06 IST" name="tearDown" finished-at="2026-11-20T01:05:06 IST" duration-ms="103" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:55 IST" name="tearDown" finished-at="2026-11-20T14:50:55 IST" duration-ms="139" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:05:06 IST" name="initializeTest" finished-at="2026-11-20T01:05:08 IST" duration-ms="2315" status="PASS">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:55 IST" name="initializeTest" finished-at="2026-11-20T14:50:59 IST" duration-ms="3559" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method signature="verifyTestCasesPage()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:05:08 IST" name="verifyTestCasesPage" finished-at="2026-11-20T01:05:09 IST" duration-ms="460" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTestCasesPage -->
-        <test-method is-config="true" signature="pageObjectInitialization()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:05:08 IST" name="pageObjectInitialization" finished-at="2026-11-20T01:05:08 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="pageObjectInitialization()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:59 IST" name="pageObjectInitialization" finished-at="2026-11-20T14:50:59 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObjectInitialization -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestGeneral@7b208b45]" started-at="2026-11-20T01:05:09 IST" name="tearDown" finished-at="2026-11-20T01:05:09 IST" duration-ms="166" status="PASS">
+        <test-method signature="verifyTestCasesPage()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:59 IST" name="verifyTestCasesPage" finished-at="2026-11-20T14:50:59 IST" duration-ms="459" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTestCasesPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui.TestGeneral@198ef2ce]" started-at="2026-11-20T14:50:59 IST" name="tearDown" finished-at="2026-11-20T14:50:59 IST" duration-ms="103" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

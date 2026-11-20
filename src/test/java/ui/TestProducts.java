@@ -29,7 +29,7 @@ public class TestProducts extends BaseTest{
 
 	// ------------------------- Products ------------------------- //
 
-	@Test
+	@Test(groups = "products")
 	public void verifyProductDetails() {
 		SoftAssert sa = new SoftAssert();
 		sa.assertTrue(home.isHomePageVisible());
@@ -42,7 +42,7 @@ public class TestProducts extends BaseTest{
 	}
 	
 	
-	@Test
+	@Test(groups = "products")
 	public void validateSearchProducts() {
 		nav.GoToProducts();
 		String productString = "T-Shirt";
@@ -52,11 +52,16 @@ public class TestProducts extends BaseTest{
 		}
 	}
 	
-	@Test void verifyCategoryProducts() {
+	@Test (groups = "products")
+	void verifyCategoryProducts() {
 		nav.GoToProducts();
 		Assert.assertEquals(productPage.categoryWomenDresses(), "WOMEN - DRESS PRODUCTS");
 	}
 	
-	
+	@Test(groups = "products")
+	void verifyBrandProducts() {
+		nav.GoToProducts();
+		Assert.assertTrue(productPage.validatePoloBrandProducts());
+	}
 	
 }

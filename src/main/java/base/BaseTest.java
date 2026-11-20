@@ -49,6 +49,7 @@ public class BaseTest extends ClassUtilities{
 			    "*adservice.google.com*",
 			    "*pagead2.googlesyndication.com*"
 			));
+			
 			((ChromeDriver) driver).executeCdpCommand("Network.enable", new HashMap<>());
 			((ChromeDriver) driver).executeCdpCommand("Network.setBlockedURLs", params);
 		}

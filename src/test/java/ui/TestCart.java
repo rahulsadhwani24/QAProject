@@ -31,7 +31,7 @@ public class TestCart extends BaseTest {
 		cart = new PageCart(driver);
 	}
 
-	@Test
+	@Test(groups = "cart")
 	public void addProductsToCart() {
 		nav.GoToProducts();
 		int arr[] = { 1, 2 };
@@ -42,7 +42,7 @@ public class TestCart extends BaseTest {
 		Assert.assertEquals(cart.cartProductCount(), 2);
 	}
 
-	@Test
+	@Test(groups = "cart")
 	public void addProductToCartWithIncreaseQuantityAndValidate() {
 		String quantity = "4";
 		nav.GoToProducts();
@@ -52,7 +52,7 @@ public class TestCart extends BaseTest {
 		Assert.assertEquals(cart.verifyProductQuantity(), quantity);
 	}
 
-	@Test
+	@Test(groups = "cart")
 	public void validateDeleteProductsFromCart() throws InterruptedException {
 		nav.GoToProducts();
 		int arr[] = { 1, 2 };
@@ -65,7 +65,7 @@ public class TestCart extends BaseTest {
 		Thread.sleep(4000);
 	}
 
-	@Test
+	@Test(groups = "cart")
 	public void validateCartAfterLogin() {
 		SoftAssert sa = new SoftAssert();
 		nav.GoToProducts();
@@ -93,7 +93,7 @@ public class TestCart extends BaseTest {
 	}
 
 	
-	@Test
+	@Test(groups = "cart")
 	public void addProductToCartFromRecommendedItems() {
 		productPage.addProductToCartAndContinue(8);
 		nav.GoToCart();

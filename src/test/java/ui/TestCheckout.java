@@ -39,7 +39,7 @@ public class TestCheckout extends BaseTest{
 		sa = new SoftAssert();
 	}
 	
-	@Test
+	@Test(groups = "checkout")
 	public void loginWhileCheckout() {
 		productPage.addProductToCartAndContinue(2);
 		productPage.addProductToCartAndContinue(4);
@@ -58,7 +58,7 @@ public class TestCheckout extends BaseTest{
 		sa.assertAll();
 	}
 	
-	@Test
+	@Test(groups = "checkout")
 	public void loginBeforeCheckout() {
 		nav.GoToAccount();
 		account.loginUser(readProperty("email"), readProperty("password"));
@@ -78,7 +78,48 @@ public class TestCheckout extends BaseTest{
 	}
 	
 	
-	@Test(dataProvider = "singleUserData", dataProviderClass = DataProviders.class)
+	@Test(groups = "checkout")
+	public void verifyDownloadInvoice() {
+		nav.GoToAccount();
+		account.loginUser(readProperty("email"), readProperty("password"));
+		sa.assertTrue(nav.isUserLoggedIn());
+		
+		nav.GoToProducts();
+		productPage.addProductToCartAndContinue(2);
+		productPage.addProductToCartAndContinue(4);
+		nav.GoToCart();
+		cart.proceedToCheckout();
+		checkOut.placeOrder();
+		payment.addCard("Rahul Sadhwani", "123456789012", "123", "12", "2040");
+		payment.proceedToPay();
+		sa.assertEquals(payment.getStatusMessage(), "ORDER PLACED!");
+		payment.downloadInvoice();
+		
+		sa.assertAll();
+	}
+
+	@Test(groups = "checkout")
+	public void verifyAddressDetailsWhileCheckout() {
+		nav.GoToAccount();
+		account.loginUser(readProperty("email"), readProperty("password"));
+		sa.assertTrue(nav.isUserLoggedIn());
+		
+		nav.GoToProducts();
+		productPage.addProductToCartAndContinue(2);
+		productPage.addProductToCartAndContinue(4);
+		nav.GoToCart();
+		cart.proceedToCheckout();
+		sa.assertEquals(checkOut.getAddress(), readProperty("city"));
+		checkOut.placeOrder();
+		payment.addCard("Rahul Sadhwani", "123456789012", "123", "12", "2040");
+		payment.proceedToPay();
+		sa.assertEquals(payment.getStatusMessage(), "ORDER PLACED!");
+		payment.downloadInvoice();
+		
+		sa.assertAll();
+	}
+	
+	@Test(dataProvider = "singleUserData", dataProviderClass = DataProviders.class, groups = "checkout")
 	public void registerWhileCheckoutAndDeleteAccount(String title, String firstName, String lastName, String birthdate, String password, 
 			String company, String address,  String country, String state, String city, String zipcode, String number, String email) {
 
@@ -106,7 +147,7 @@ public class TestCheckout extends BaseTest{
 		sa.assertAll();	
 	}
 	
-	@Test(dataProvider = "singleUserData", dataProviderClass = DataProviders.class)
+	@Test(dataProvider = "singleUserData", dataProviderClass = DataProviders.class, groups = "checkout")
 	public void registerBeforeCheckoutAndDeleteAccount(String title, String firstName, String lastName, String birthdate, String password, 
 			String company, String address,  String country, String state, String city, String zipcode, String number, String email) {
 		

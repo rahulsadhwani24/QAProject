@@ -68,6 +68,9 @@ public class PageProducts extends ClassUtilities {
 	WebElement categoryKidsShirts;
 	
 	
+	@FindBy(xpath = "//div[@class='brands-name']//a[text()='Polo']")
+	WebElement brandPolo;
+	
 	// Product Description Page
 	@FindBy(className = "product-information")
 	WebElement productInformation;
@@ -167,6 +170,17 @@ public class PageProducts extends ClassUtilities {
 		categoryDress.click();
 		WaitForElementToAppear(driver, title);
 		return title.getText();
+	}
+	
+	public boolean validatePoloBrandProducts() {
+		WaitForElementToAppear(driver, brandPolo);
+		brandPolo.click();
+		if(title.getText().equalsIgnoreCase("Brand - Polo Products")) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 }

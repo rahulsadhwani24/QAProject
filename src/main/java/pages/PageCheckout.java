@@ -21,6 +21,9 @@ public class PageCheckout extends ClassUtilities{
 	@FindBy(css = "a[href='/payment']")
 	WebElement buttonPlaceOrder;
 	
+	@FindBy(css = "#address_delivery .address_city")
+	WebElement city;
+	
 	
 	public void placeOrderWithDescription(String message) {
 		WaitForElementToAppear(driver, buttonPlaceOrder);
@@ -32,5 +35,11 @@ public class PageCheckout extends ClassUtilities{
 		WaitForElementToAppear(driver, buttonPlaceOrder);
 		buttonPlaceOrder.click();
 	}
+	
+	public String getAddress() {
+		WaitForElementToAppear(driver, city);
+		return city.getText().split(" ")[0];
+	}
+	
 	
 }

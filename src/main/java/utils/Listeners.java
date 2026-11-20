@@ -28,7 +28,7 @@ public class Listeners extends ClassUtilities implements ITestListener {
 	@Override
 	public void onTestStart(ITestResult result) {
 		System.out.println("-----------------Test Started---------------------");
-		System.out.println(result.getName());
+		System.out.println("-----------------"+ result.getName() +"---------------------");
 		if (result.getThrowable() != null) {
 			System.out.println(result.getThrowable());
 		}
@@ -37,7 +37,7 @@ public class Listeners extends ClassUtilities implements ITestListener {
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		System.out.println("-----------------Test Successfully Completed---------------------");
-		System.out.println(result.getName());
+		System.out.println("-----------------"+ result.getName() +"---------------------");
 		if (result.getThrowable() != null) {
 			System.out.println(result.getThrowable());
 		}
@@ -54,7 +54,8 @@ public class Listeners extends ClassUtilities implements ITestListener {
 			Allure.attachment("Failure Screenshot - " + result.getName(), new ByteArrayInputStream(screenshot));
 		}
 
-		System.out.println(result.getName());
+		System.out.println("-----------------"+ result.getName() +"---------------------");
+		
 		if (result.getThrowable() != null) {
 			System.out.println(result.getThrowable());
 		}
